@@ -1,0 +1,11 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.1.RELEASE'
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile("org.springframework.boot:spring-boot-starter-jetty")
+    compile project(':projectA')
+}
